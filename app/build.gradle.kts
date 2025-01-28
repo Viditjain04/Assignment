@@ -67,7 +67,12 @@ dependencies {
     androidTestImplementation(libs.androidx.ui.test.junit4)
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
-    implementation (libs.retrofit)
-    implementation (libs.retrofit.gson.convertor)
+    implementation(libs.retrofit)
+    implementation(libs.retrofit.gson.convertor)
+    implementation(libs.androidx.room.runtime)
+    annotationProcessor(libs.androidx.room.compiler)
+    implementation(libs.androidx.lifecycle.extensions)
+    annotationProcessor(libs.androidx.lifecycle.compiler)
+    implementation ("com.squareup.okhttp3:okhttp:4.12.0")
 
 }

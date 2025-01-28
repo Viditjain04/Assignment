@@ -1,16 +1,20 @@
 package com.myjar.jarassignment.data.model
 
+import androidx.room.Entity
+import androidx.room.PrimaryKey
 import com.google.gson.annotations.SerializedName
 
+@Entity(tableName = "ComputerItem")
 data class ComputerItem(
-    val id: String,
-    val name: String,
-    val data: ItemData? = null
+    @PrimaryKey(autoGenerate = true)
+    @SerializedName("id") var id: String = "",
+    @SerializedName("name") var name: String = "",
+    @SerializedName("data") var data: ItemData? = ItemData()
 )
 
 data class ItemData(
-    val color: String? = null,
-    val capacity: String? = null,
+    @SerializedName("color") var color: String? = "",
+    @SerializedName("capacity") var capacity: String? = "",
     @SerializedName("price") val price: Double? = null,
     @SerializedName("capacity GB") val capacityGB: Int? = null,
     @SerializedName("Screen size") val screenSize: Double? = null,
